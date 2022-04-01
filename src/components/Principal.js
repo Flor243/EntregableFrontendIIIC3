@@ -2,7 +2,6 @@ import React from "react";
 import data from "./data.json";
 import Opciones from "./OpcionesPosibles";
 import Historial from "./Historial";
-import Swal from "sweetalert2";
 
 class Principal extends React.Component {
   constructor() {
@@ -58,7 +57,7 @@ class Principal extends React.Component {
       this.state.opciones[this.state.contador].id === "5a" ||
       this.state.opciones[this.state.contador].id === "5b"
     ) {
-      Swal.fire("Fin.");
+      alert("Fin.");
       console.log("Fin");
       this.setState({
         contador: this.state.contador,
@@ -67,7 +66,7 @@ class Principal extends React.Component {
   };
 
   componentDidMount() {
-    Swal.fire("Bienvenido a elige tu propia aventura");
+    alert("Bienvenido a elige tu propia aventura");
   }
 
   componentDidUpdate(_, prevState) {
